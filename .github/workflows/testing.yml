@@ -1,0 +1,18 @@
+name: Testing
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run checkout@v3
+        uses: actions/checkout@v3
+      - name: Run Jest Tests
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm i
+      - run: npm run test

@@ -16,4 +16,31 @@ describe("App", () => {
     "Productivity Tracker". */
     expect(mainHeading.innerHTML).toBe("Productivity Tracker");
   });
+
+  it("should have activity input and its label", () => {
+    render(<App />);
+
+    const input = screen.getByLabelText("Activity:", { selector: 'input' });
+
+    expect(input != undefined).toBeTruthy();
+  });
+
+  it("should have time taken input and its label", () => {
+    render(<App />);
+
+    const input = screen.getByLabelText("Time Taken:", { selector: 'input' });
+
+    expect(input != undefined).toBeTruthy();
+  });
+
+  it("should have a button to add", () => {
+    render(<App />);
+
+
+    const button = screen.getByRole('button', {
+      name: /Add/i
+    })
+
+    expect(button != undefined).toBeTruthy();
+  });
 });
