@@ -40,7 +40,7 @@ const Login = () => {
           <input type="email" id="email" name="email" />
         </span>
         <span>
-          <label htmlFor="password">Passwordasd:</label>
+          <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" />
         </span>
         <button type="submit">Login</button>
