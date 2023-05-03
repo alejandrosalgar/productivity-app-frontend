@@ -77,7 +77,7 @@ const App = () => {
             />
           </div>
           <button type="submit" data-testid="activity-add-button">
-            Create Activity
+            Add
           </button>
         </form>
       </header>
