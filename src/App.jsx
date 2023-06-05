@@ -18,9 +18,17 @@ const App = () => {
           },
         }
       );
+
+      if (result.status == 401) {
+        localStorage.removeItem("token");
+        window.location.reload();
+      }
+
       const data = await result.json();
       setActivities(data);
+
     };
+
     fetchData();
   }, [token]);
 
