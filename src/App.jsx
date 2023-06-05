@@ -19,7 +19,7 @@ const App = () => {
         }
       );
 
-      if (result.status == 401) {
+      if (result.status === 401) {
         localStorage.removeItem("token");
         window.location.reload();
       }
